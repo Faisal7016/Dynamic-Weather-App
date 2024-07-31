@@ -1,0 +1,28 @@
+@media screen and (max-width: 800px){
+    .panel,.container{
+        position: relative;
+        width: 100%;
+        top: initial;
+        scroll-behavior: smooth;
+    }
+    .weather{
+        padding-left: 7%;
+    }
+    .weather span{
+        padding-left: 15%;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 10px;
+        scroll-behavior: smooth;
+    }
+    
+}
+@media screen and (max-width: 300px) {
+    .weather-app{
+        min-height: 40em;
+    }
+}

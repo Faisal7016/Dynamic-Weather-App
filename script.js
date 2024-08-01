@@ -38,7 +38,7 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault();
 });
 
-function dayOfTheWeeK(year,month,day){
+function dayOfTheWeeK(){
     const weekDay = [
         "Sunday",
         "Monday",
@@ -48,7 +48,7 @@ function dayOfTheWeeK(year,month,day){
         "Friday",
         "Saturday"
     ];
-    return weekDay[new Date(`${year}-${month}-${day}`).getDay()];
+    return weekDay[new Date().getDay()];
     
 };
 
@@ -67,7 +67,7 @@ function fetchWeatherData(){
         
         const time = date.substr(11);
         timeOutput.innerHTML = time;
-        dateOutput.innerHTML = `${dayOfTheWeeK(y,m,d)} ${d}-${m}-${y}`;
+        dateOutput.innerHTML = `${dayOfTheWeeK()} ${d}-${m}-${y}`;
         nameOutput.innerHTML = data.location.name;
         const iconId = data.current.condition.icon.substr("//cdn.weatherapi.com/weather/64x64/".length);
         icon.src = "./icons/" + iconId;
